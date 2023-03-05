@@ -1,3 +1,25 @@
+port: 3333
+socks-port: 23456
+redir-port: 23457
+allow-lan: true
+mode: rule
+log-level: error
+external-controller: 192.168.50.1:9990
+experimental:
+  ignore-resolve-fail: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:23453
+  ipv6: false
+  enhanced-mode: redir-host 
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://223.5.5.5/dns-query
+  fallback:
+    - tls://1.1.1.1:853
+    - tls://dns.google
+
 proxies:
   - { name: "香港IPLC专线(奈飞专用)", type: ss, server: "iplcdn.in", port: 6010, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
   - { name: "台湾IPLC专线", type: ss, server: "iplcdn.in", port: 6020, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
@@ -8887,24 +8909,3 @@ rules:
 #---------------------------国内网站完--------------------------------#
   - MATCH,🐟 漏网之鱼
 
-port: 3333
-socks-port: 23456
-redir-port: 23457
-allow-lan: true
-mode: rule
-log-level: error
-external-controller: 192.168.50.1:9990
-experimental:
-  ignore-resolve-fail: true
-
-dns:
-  enable: true
-  listen: 0.0.0.0:23453
-  ipv6: false
-  enhanced-mode: redir-host 
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://223.5.5.5/dns-query
-  fallback:
-    - tls://1.1.1.1:853
-    - tls://dns.google
