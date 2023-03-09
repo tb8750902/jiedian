@@ -30,9 +30,9 @@ proxies:
   - { name: "新加坡iplc专线（奈飞专用）", type: ss, server: "iplcdn.in", port: 6050, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
   - { name: "俄罗斯专线", type: ss, server: "iplcdn.in", port: 6060, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
   - { name: "美国专线(奈飞专用)", type: ss, server: "iplcdn.in", port: 6070, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
-  - { name: "ks1277", type: ss, server: "zz.woaizhongguo.xyz", port: 8443, password: "787ab299-29fd-4b07-9d05-3825ed3599cf", cipher: "aes-128-gcm" }
-  - { name: "ab1277", type: trojan, server: "zz.woaizhongguo.xyz", port: 80, password: "woainizhongguo", sni: "ab.yinni1277.xyz" }
-  - { name: "xf1236", type: trojan, server: "beijinghao.xyz", port: 8443, password: "woainizhongguo", sni: "ab.yinni1236.xyz" }
+  - { name: "ks1277", type: ss, server: "zz.woaizhongguo.xyz", port: 8443, password: "woaini", cipher: "aes-256-gcm" }
+  - { name: "ab1277", type: ss, server: "zz.woaizhongguo.xyz", port: 80, password: "woaini", cipher: "aes-256-gcm" }
+  - { name: "xf1236", type: ss, server: "beijinghao.xyz", port: 8443, password: "woaini", cipher: "aes-256-gcm" }
 
 proxy-groups:
   - {name: "🎯 总模式", type: select, proxies: ["Ⓜ️ 延迟最低", "Ⓜ️ 负载均衡", "Ⓜ️ 故障切换", "♻️ 手动切换", "DIRECT"]}
