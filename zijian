@@ -30,19 +30,19 @@ proxies:
   - { name: "新加坡iplc专线（奈飞专用）", type: ss, server: "iplcdn.in", port: 6050, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
   - { name: "俄罗斯专线", type: ss, server: "iplcdn.in", port: 6060, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
   - { name: "美国专线(奈飞专用)", type: ss, server: "iplcdn.in", port: 6070, password: "16692b37-be5f-4401-b491-f06f627e36b7", cipher: "aes-128-gcm" }
-  - { name: "yinni345", type: ss, server: "beijinghao.xyz", port: 8080, password: "787ab299-29fd-4b07-9d05-3825ed3599cf", cipher: "aes-128-gcm" }
-  - { name: "1277", type: trojan, server: "121.201.125.160", port: 1200, password: "woainizhongguo", sni: "ab.yinni1277.xyz" }
-  - { name: "ab1236", type: trojan, server: "ab.woaizhongguo.xyz", port: 80, password: "woainizhongguo", sni: "ab.yinni1236.xyz" }
+  - { name: "ks1277", type: ss, server: "zz.woaizhongguo.xyz", port: 8443, password: "787ab299-29fd-4b07-9d05-3825ed3599cf", cipher: "aes-128-gcm" }
+  - { name: "ab1277", type: trojan, server: "zz.woaizhongguo.xyz", port: 80, password: "woainizhongguo", sni: "ab.yinni1277.xyz" }
+  - { name: "xf1236", type: trojan, server: "beijinghao.xyz", port: 8443, password: "woainizhongguo", sni: "ab.yinni1236.xyz" }
 
 proxy-groups:
   - {name: "🎯 总模式", type: select, proxies: ["Ⓜ️ 延迟最低", "Ⓜ️ 负载均衡", "Ⓜ️ 故障切换", "♻️ 手动切换", "DIRECT"]}
-  - {name: "Ⓜ️ 延迟最低", type: url-test, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
-  - {name: "Ⓜ️ 故障切换", type: fallback, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
-  - {name: "Ⓜ️ 负载均衡", type: load-balance, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
-  - {name: "♻️ 手动切换", type: select, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
-  - {name: "♻️ 手动切换1", type: select, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
-  - {name: "♻️ 手动切换2", type: select, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
-  - {name: "♻️ 手动切换3", type: select, proxies: ["yinni345","1277","ab1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
+  - {name: "Ⓜ️ 延迟最低", type: url-test, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
+  - {name: "Ⓜ️ 故障切换", type: fallback, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
+  - {name: "Ⓜ️ 负载均衡", type: load-balance, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"], url: "https://www.gstatic.com/generate_204", interval: 300}
+  - {name: "♻️ 手动切换", type: select, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
+  - {name: "♻️ 手动切换1", type: select, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
+  - {name: "♻️ 手动切换2", type: select, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
+  - {name: "♻️ 手动切换3", type: select, proxies: ["ks1277","ab1277","xf1236","香港IPLC专线(奈飞专用)","台湾IPLC专线","日本IPLC专线","韩国IPLC专线","阿根廷IPLC专线","土耳其IPLC专线","新加坡iplc专线（奈飞专用）","俄罗斯专线","美国专线(奈飞专用)"]}
   - { name: "🍎 苹果服务", type: select, proxies: ["DIRECT","🎯 总模式","Ⓜ️ 负载均衡","Ⓜ️ 延迟最低","Ⓜ️ 故障切换","♻️ 手动切换","♻️ 手动切换1","♻️ 手动切换2","♻️ 手动切换3"]}
   - { name: "🧩 微软服务", type: select, proxies: ["DIRECT","🎯 总模式","Ⓜ️ 负载均衡","Ⓜ️ 延迟最低","Ⓜ️ 故障切换","♻️ 手动切换","♻️ 手动切换1","♻️ 手动切换2","♻️ 手动切换3"]}
   - { name: "📲 聊天软件", type: select, proxies: ["🎯 总模式","Ⓜ️ 负载均衡","Ⓜ️ 延迟最低","Ⓜ️ 故障切换","♻️ 手动切换","♻️ 手动切换1","♻️ 手动切换2","♻️ 手动切换3","DIRECT"]}
